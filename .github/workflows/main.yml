@@ -2,10 +2,10 @@ name: My Pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
-    
+    branches: ["main"]
+
 jobs:
   php-cs:
     runs-on: ubuntu-latest
@@ -15,7 +15,7 @@ jobs:
       - name: PHP Setup
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version: "8.2"
           tools: phpcs
       - name: Run phpcs
         run: phpcs --report-full --standard=PSR2 .
